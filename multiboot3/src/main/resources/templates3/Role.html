@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorate="layout">
+<head>
+    <title> Create</title>
+</head>
+<body>
+<h1 layout:fragment="header">Role : Create</h1>
+<div layout:fragment="content" class="container">
+    <form id="roleForm" th:action="@{/role(form)}" th:object="${role}"
+          action="#" method="post">
+        	<label>Description</label> : <input name="description" value="${role.description}" /><br/>
+	<label>Name</label> : <input name="name" value="${role.name}" /><br/>
+	<label>User</label> : <input name="user" value="${role.user}" /><br/>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,2 @@
+#parse ("macro.vm")
+#generateLabelAndInput($classNameLowCase $attrs "add")

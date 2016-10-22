@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorate="layout">
+<head>
+    <title> Create</title>
+</head>
+<body>
+<h1 layout:fragment="header">Album : Create</h1>
+<div layout:fragment="content" class="container">
+    <form id="albumForm" th:action="@{/album(form)}" th:object="${album}"
+          action="#" method="post">
+        	<label>AlbumName</label> : <input name="albumName" value="${album.albumName}" /><br/>
+	<label>Author</label> : <input name="author" value="${album.author}" /><br/>
+	<label>Descripe</label> : <input name="descripe" value="${album.descripe}" /><br/>
+	<label>PublishDate</label> : <input name="publishDate" value="${album.publishDate}" /><br/>
+	<label>CreateTime</label> : <input name="createTime" value="${album.createTime}" /><br/>
+	<label>ImgPath</label> : <input name="imgPath" value="${album.imgPath}" /><br/>
+	<label>ClassifyId</label> : <input name="classifyId" value="${album.classifyId}" /><br/>
+    </form>
+</div>
+</body>
+</html>

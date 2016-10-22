@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorate="layout">
+<head>
+    <title> Create</title>
+</head>
+<body>
+<h1 layout:fragment="header">Artist : Create</h1>
+<div layout:fragment="content" class="container">
+    <form id="artistForm" th:action="@{/artist(form)}" th:object="${artist}"
+          action="#" method="post">
+        	<label>ArtistId</label> : <input name="artistId" value="${artist.artistId}" /><br/>
+	<label>ArtistName</label> : <input name="artistName" value="${artist.artistName}" /><br/>
+	<label>ArtistPath</label> : <input name="artistPath" value="${artist.artistPath}" /><br/>
+	<label>ArtistImg</label> : <input name="artistImg" value="${artist.artistImg}" /><br/>
+	<label>AlbumId</label> : <input name="albumId" value="${artist.albumId}" /><br/>
+	<label>ArtistTraceLength</label> : <input name="artistTraceLength" value="${artist.artistTraceLength}" /><br/>
+    </form>
+</div>
+</body>
+</html>

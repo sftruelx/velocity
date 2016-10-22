@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorate="layout">
+<head>
+    <title> Create</title>
+</head>
+<body>
+<h1 layout:fragment="header">MyTableField : Create</h1>
+<div layout:fragment="content" class="container">
+    <form id="myTableFieldForm" th:action="@{/myTableField(form)}" th:object="${myTableField}"
+          action="#" method="post">
+        	<label>Comment</label> : <input name="comment" value="${myTableField.comment}" /><br/>
+	<label>Field</label> : <input name="field" value="${myTableField.field}" /><br/>
+	<label>FieldKey</label> : <input name="fieldKey" value="${myTableField.fieldKey}" /><br/>
+	<label>FieldNull</label> : <input name="fieldNull" value="${myTableField.fieldNull}" /><br/>
+	<label>FieldType</label> : <input name="fieldType" value="${myTableField.fieldType}" /><br/>
+	<label>TableName</label> : <input name="tableName" value="${myTableField.tableName}" /><br/>
+	<label>FieldUpCase</label> : <input name="fieldUpCase" value="${myTableField.fieldUpCase}" /><br/>
+    </form>
+</div>
+</body>
+</html>

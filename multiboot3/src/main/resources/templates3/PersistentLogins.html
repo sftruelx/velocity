@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorate="layout">
+<head>
+    <title> Create</title>
+</head>
+<body>
+<h1 layout:fragment="header">PersistentLogins : Create</h1>
+<div layout:fragment="content" class="container">
+    <form id="persistentLoginsForm" th:action="@{/persistentLogins(form)}" th:object="${persistentLogins}"
+          action="#" method="post">
+        	<label>Username</label> : <input name="username" value="${persistentLogins.username}" /><br/>
+	<label>Series</label> : <input name="series" value="${persistentLogins.series}" /><br/>
+	<label>Token</label> : <input name="token" value="${persistentLogins.token}" /><br/>
+	<label>LastUsed</label> : <input name="lastUsed" value="${persistentLogins.lastUsed}" /><br/>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorate="layout">
+<head>
+    <title> Create</title>
+</head>
+<body>
+<h1 layout:fragment="header">Classify : Create</h1>
+<div layout:fragment="content" class="container">
+    <form id="classifyForm" th:action="@{/classify(form)}" th:object="${classify}"
+          action="#" method="post">
+        	<label>ParentId</label> : <input name="parentId" value="${classify.parentId}" /><br/>
+	<label>Level</label> : <input name="level" value="${classify.level}" /><br/>
+	<label>Title</label> : <input name="title" value="${classify.title}" /><br/>
+	<label>ImgUrl</label> : <input name="imgUrl" value="${classify.imgUrl}" /><br/>
+	<label>ImgPath</label> : <input name="imgPath" value="${classify.imgPath}" /><br/>
+	<label>CreateTm</label> : <input name="createTm" value="${classify.createTm}" /><br/>
+	<label>End</label> : <input name="end" value="${classify.end}" /><br/>
+    </form>
+</div>
+</body>
+</html>

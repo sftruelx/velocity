@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorate="layout">
+<head>
+    <title> Create</title>
+</head>
+<body>
+<h1 layout:fragment="header">AppUser : Create</h1>
+<div layout:fragment="content" class="container">
+    <form id="appUserForm" th:action="@{/appUser(form)}" th:object="${appUser}"
+          action="#" method="post">
+        	<label>AccountExpired</label> : <input name="accountExpired" value="${appUser.accountExpired}" /><br/>
+	<label>AccountLocked</label> : <input name="accountLocked" value="${appUser.accountLocked}" /><br/>
+	<label>Address</label> : <input name="address" value="${appUser.address}" /><br/>
+	<label>City</label> : <input name="city" value="${appUser.city}" /><br/>
+	<label>Country</label> : <input name="country" value="${appUser.country}" /><br/>
+	<label>PostalCode</label> : <input name="postalCode" value="${appUser.postalCode}" /><br/>
+	<label>Province</label> : <input name="province" value="${appUser.province}" /><br/>
+	<label>CredentialsExpired</label> : <input name="credentialsExpired" value="${appUser.credentialsExpired}" /><br/>
+	<label>Email</label> : <input name="email" value="${appUser.email}" /><br/>
+	<label>AccountEnabled</label> : <input name="accountEnabled" value="${appUser.accountEnabled}" /><br/>
+	<label>FirstName</label> : <input name="firstName" value="${appUser.firstName}" /><br/>
+	<label>LastName</label> : <input name="lastName" value="${appUser.lastName}" /><br/>
+	<label>Password</label> : <input name="password" value="${appUser.password}" /><br/>
+	<label>PasswordHint</label> : <input name="passwordHint" value="${appUser.passwordHint}" /><br/>
+	<label>PhoneNumber</label> : <input name="phoneNumber" value="${appUser.phoneNumber}" /><br/>
+	<label>Username</label> : <input name="username" value="${appUser.username}" /><br/>
+	<label>Version</label> : <input name="version" value="${appUser.version}" /><br/>
+	<label>Website</label> : <input name="website" value="${appUser.website}" /><br/>
+    </form>
+</div>
+</body>
+</html>
